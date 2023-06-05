@@ -40,3 +40,16 @@ class Socio():
                 print('Se creó el archivo socios.json')
                 json.dump([socio], archivo, default=str)
                 print('Socio agregado al archivo')
+
+    @classmethod
+    def mostrar_socios(cls):
+        if os.path.isfile(path):
+
+            with open(path) as archivo:
+                socios = json.load(archivo)
+
+                for socio in socios:
+                    print(socio)
+
+        else:
+            print('Aún no hay socios cargados!')
